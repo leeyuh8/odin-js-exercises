@@ -11,7 +11,11 @@ const leapYears = function(year) {
     // if (lastTwoDigits === 00 
     // && year % 400 === 0 
     // && year % 4 === 0) return 'true';
-    if (year % 4 === 0) return true;
+    if (year % 4 === 0) {
+        return true;
+    } else {
+        return false;
+    }
 };
 
 // Do not edit below this line
