@@ -3,13 +3,13 @@
 -use splice to remove that number by its index
 -return new array
 
-update take multiple numToRemove arguments:
+For test 2:
 - *arguments can be treated like arrays
    (it has indexes and uses the .length method)*
 - convert previous code to for loop that runs
 the code for each numToRemove
 
-update code for test 3:
+For test 3:
 - for each value-to-be-removed, check to see if it
 is in the array:
     -if yes, run previous code.
