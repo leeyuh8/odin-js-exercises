@@ -5,20 +5,31 @@
     - code adds the current i value to the finalSum variable
 
 Updates for test 3:
-    - treat argument as array
+    - store argument as an array
     - rearrange argument array from smallest to largest
     and store in variable sortedArray
     - i should reference element in ascendingArray
+
+Updates for test 4:
+    - nest all code in an if statement
+    - if statement checks for negative numbers in arguments:
+        - if true, return ERROR
+        - if false, run nested code
 */
 
 const sumAll = function() {
-    let finalSum = 0;
     let array = Array.from(arguments);
     let sortedArray = array.sort();
-    for (let i = sortedArray[0]; i <= sortedArray[sortedArray.length-1]; i++) {
-        finalSum += i;
+
+    if (sortedArray.some(x => x < 0)) {
+        return 'ERROR';
+    } else {
+        let finalSum = 0;
+        for (let i = sortedArray[0]; i <= sortedArray[sortedArray.length-1]; i++) {
+            finalSum += i;
+        }
+        return finalSum;
     }
-    return finalSum;
 };
 
 // Do not edit below this line
