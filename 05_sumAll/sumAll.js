@@ -25,6 +25,9 @@ Update for test 5:
     condition checking for negative numbers to reference that
     array. 
 
+Update for test 6:
+    - add to if condition a check on the original array
+    for elements with the type object. If true, return ERROR
 */
 
 const sumAll = function() {
@@ -33,7 +36,9 @@ const sumAll = function() {
         x => typeof x === 'number'
     );
 
-    if (arrayNumbers.some(x => x < 0) || array.some(x => typeof x === "string")) {
+    if (arrayNumbers.some(x => x < 0) 
+    || array.some(x => typeof x === "string")
+    || array.some(x => typeof x === "object")) {
         return 'ERROR';
     } else {
         let finalSum = 0;
