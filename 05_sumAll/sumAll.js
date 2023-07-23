@@ -15,16 +15,29 @@ Updates for test 4:
     - if statement checks for negative numbers in arguments:
         - if true, return ERROR
         - if false, run nested code
+
+Update for test 5:
+    - problem: if condition checking for negative numbers is reading
+    number strings like "90" as numbers when I only want 
+    to test elements that have the number type.
+    - at top, create arrayNumbers that contains only
+    elements that have the number type. Then, update if
+    condition checking for negative numbers to reference that
+    array. 
+
 */
 
 const sumAll = function() {
     let array = Array.from(arguments);
-    let sortedArray = array.sort();
+    let arrayNumbers = array.filter(
+        x => typeof x === 'number'
+    );
 
-    if (sortedArray.some(x => x < 0)) {
+    if (arrayNumbers.some(x => x < 0) || array.some(x => typeof x === "string")) {
         return 'ERROR';
     } else {
         let finalSum = 0;
+        let sortedArray = array.sort();
         for (let i = sortedArray[0]; i <= sortedArray[sortedArray.length-1]; i++) {
             finalSum += i;
         }
