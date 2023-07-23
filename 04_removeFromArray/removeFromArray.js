@@ -16,7 +16,7 @@ is in the array:
     -if no, continue to next value without running code.
 */
 
-const removeFromArray = function(array) {
+const removeFromArray = function(array, ...nums) {
     for (let i = 1; i < arguments.length; i++) {
         if (array.includes(arguments[i]) === false) continue; 
         let index = array.indexOf(arguments[i]);
