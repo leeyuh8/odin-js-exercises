@@ -8,11 +8,20 @@ update take multiple numToRemove arguments:
    (it has indexes and uses the .length method)*
 - convert previous code to for loop that runs
 the code for each numToRemove
+
+update code for test 3:
+- for each value-to-be-removed, check to see if it
+is in the array:
+    -if yes, run previous code.
+    -if no, continue to next value without running code.
 */
 
-const removeFromArray = function(array, num) {
-    let index = array.indexOf(num);
-    array.splice(index, 1);
+const removeFromArray = function(array) {
+    for (let i = 1; i < arguments.length; i++) {
+        if (array.includes(arguments[i]) === false) continue; 
+        let index = array.indexOf(arguments[i]);
+        array.splice(index, 1);
+    };
     return array;
 };
 
