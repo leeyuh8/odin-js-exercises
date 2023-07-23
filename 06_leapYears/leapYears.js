@@ -1,21 +1,19 @@
 /*
-Conditions:
-    - all leap years are divisible by 4
-    - for all test years that end in '00', it is only a
-    leap year if it is divisible by 400
-    - code should test the '00' year exception first
+For initial code:
+    - you need to test two groups of years, those that
+    end in 00 and those that do not.
+    - those that do not end in 00 must also be divisible by 4
+    to be a leap year.
+    - those that end in 00 must also be divisible by 400
+    to be a leap year. 
 */
 
 const leapYears = function(year) {
-    let lastTwoDigits = +year.toString().slice(-2);
-    // if (lastTwoDigits === 00 
-    // && year % 400 === 0 
-    // && year % 4 === 0) return 'true';
-    if (year % 4 === 0) {
-        return true;
-    } else {
-        return false;
-    }
+    let lastTwoDigits = year.toString().slice(-2);
+
+    if (lastTwoDigits !== "00" && year % 4 === 0) return true;
+    if (lastTwoDigits === "00" && year % 400 === 0) return true;
+    return false;
 };
 
 // Do not edit below this line
