@@ -14,8 +14,8 @@ const multiply = function(arr) {
   return arr.reduce( (product, current) => product * current, 1);
 };
 
-const power = function() {
-	
+const power = function(base, power) {
+	return base ** power;
 };
 
 const factorial = function() {
