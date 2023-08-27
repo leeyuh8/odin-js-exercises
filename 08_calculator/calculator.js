@@ -18,8 +18,14 @@ const power = function(base, power) {
 	return base ** power;
 };
 
-const factorial = function() {
-	
+const factorial = function(num) {
+  if (num === 0) return 1;
+
+  let product = num;
+  for (let i = 1; i < num; i++) {
+    product = product * (num - i);
+  }
+  return product;
 };
 
 // Do not edit below this line
