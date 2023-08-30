@@ -1,5 +1,5 @@
 const palindromes = function (str) {
-  let original = str.split('');
+  let original = str.toLowerCase().split('');
   let originalLettersOnly = original.filter( x => {
     return x !== '!' && x !== ',' && x !== '.' 
     && x !==' '
