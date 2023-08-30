@@ -1,9 +1,11 @@
 const palindromes = function (str) {
   let original = str.split('');
-  let reverse = original.reverse();
+  let originalLettersOnly = original.filter( char => 
+    char !== '!' || char !== ',' || char !== '.');
+  let reverse = originalLettersOnly.reverse();
   
-  for (let i = 0; i < original.length - 1; i++) {
-    if (original[i] !== reverse[i]) return false;
+  for (let i = 0; i < originalLettersOnly.length - 1; i++) {
+    if (originalLettersOnly[i] !== reverse[i]) return false;
   };
 
   return true;
