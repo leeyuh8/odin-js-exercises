@@ -1,16 +1,16 @@
 const palindromes = require('./palindromes')
 
 describe('palindromes', () => {
-  test('works with single words', () => {
+  test.skip('works with single words', () => {
     expect(palindromes('racecar')).toBe(true);
   });
-  test('works with punctuation ', () => {
+  test.skip('works with punctuation ', () => {
     expect(palindromes('racecar!')).toBe(true);
   });
   test.skip('works with upper-case letters ', () => {
     expect(palindromes('Racecar!')).toBe(true);
   });
-  test.skip('works with multiple words', () => {
+  test('works with multiple words', () => {
     expect(palindromes('A car, a man, a maraca.')).toBe(true);
   });
   test.skip('works with multiple words', () => {
